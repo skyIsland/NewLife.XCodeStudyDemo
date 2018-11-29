@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tables Version="9.9.6881.41313" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com ModelSchema.xsd" NameSpace="XCode.Membership" ConnName="Membership" Output="" BaseClass="Entity" xmlns="http://www.newlifex.com/ModelSchema.xsd">
+  <Table Name="Student" Description="学生">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称。登录用户名" />
+      <Column Name="Password" DataType="String" Description="密码" />
+      <Column Name="Sex" DataType="Int32" Description="性别。未知、男、女" Type="SexKinds" />
+      <Column Name="Age" DataType="Int32" Description="年龄" Type="" />
+      <Column Name="Mail" DataType="String" Description="邮件" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" />
+      <Column Name="Enable" DataType="Boolean" Description="启用" />
+      <Column Name="Logins" DataType="Int32" Description="登录次数" />
+      <Column Name="LastLogin" DataType="DateTime" Description="最后登录" />
+      <Column Name="LastLoginIP" DataType="String" Description="最后登录IP" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+    </Indexes>
+  </Table>
+</Tables>
